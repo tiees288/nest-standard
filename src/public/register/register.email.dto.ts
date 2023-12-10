@@ -10,8 +10,8 @@ export class CreateUserDto {
   email: string;
   @IsNotEmpty()
   password: string;
-  @IsImage()
-  image: File;
+  // @IsImage()
+  // image: File;
 }
 
 export class CreateUserResponseDto {
