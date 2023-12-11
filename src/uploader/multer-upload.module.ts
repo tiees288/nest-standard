@@ -1,4 +1,3 @@
-import { Module } from '@nestjs/common';
 import { MulterModule } from '@nestjs/platform-express';
 import * as multer from 'multer';
 
@@ -14,9 +13,6 @@ const MulterUplaoModule = MulterModule.register({
       cb(null, `${file.fieldname}-${uniqueSuffix}.${fileExtension}`);
     },
   }),
-  limits: {
-    fileSize: 1024 * 1024 * 10, // 10MB
-  },
 });
 
 export { MulterUplaoModule };
